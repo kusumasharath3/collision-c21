@@ -1,4 +1,4 @@
-var fixedRect, movingRect,fixedRect1;
+var fixedRect, movingRect;
 function setup() {
   createCanvas(1200,800);
   
@@ -7,8 +7,8 @@ function setup() {
   movingRect.shapeColor = "green";
 fixedRect= createSprite(100, 100, 50, 50);
 fixedRect.shapeColor = "green";
-fixedRect1 = createSprite(200, 100, 50, 50);
-fixedRect1.shapeColor = "green";
+//fixedRect1 = createSprite(200, 100, 50, 50);
+//fixedRect1.shapeColor = "green";
   
 }
 function draw() {
@@ -19,14 +19,14 @@ function draw() {
     movingRect.shapeColor = "blue";
     fixedRect.shapeColor = "blue";
   }
-  else if(isTouching(movingRect, fixedRect1)){
+ /* else if(isTouching(movingRect, fixedRect1)){
     movingRect.shapeColor = "blue";
     fixedRect1.shapeColor = "blue";
-  }
+  }*/
   else {
     movingRect.shapeColor = "green";
     fixedRect.shapeColor = "green";
-    fixedRect1.shapeColor = "green"
+  // fixedRect1.shapeColor = "green"
   }
   drawSprites();
 }
